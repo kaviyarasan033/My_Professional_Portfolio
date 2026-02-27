@@ -19,8 +19,8 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Install Dependencies
-        run: npm ci
+      - name: Install Dependencies (skip optional)
+        run: npm ci --omit=optional
 
       - name: Build Angular App
         run: npm run build
@@ -31,7 +31,6 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftp
           port: 21
           local-dir: dist/ai-studio-angular-app/browser/
           server-dir: developerkavi/browser/
