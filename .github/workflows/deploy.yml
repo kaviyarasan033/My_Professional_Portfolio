@@ -20,8 +20,8 @@ jobs:
           cache: npm
 
       - name: Install Dependencies (skip optional)
-        run: npm ci --omit=optional
-
+        run: npm install --no-optional
+    
       - name: Build Angular App
         run: npm run build
 
