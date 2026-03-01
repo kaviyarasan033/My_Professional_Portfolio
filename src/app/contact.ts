@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, inject, PLATFORM_ID } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { gsap } from 'gsap';
@@ -169,34 +170,32 @@ export class ContactComponent implements AfterViewInit {
     }
   }
 
- onSubmit() {
+onSubmit() {
   if (this.contactForm.valid) {
     this.isSubmitting = true;
     const loadingId = this.toastService.loading('Sending message...');
 
-    fetch('https://portkaviapi.techtigers.in/api/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(this.contactForm.value)
-    })
-    .then(res => res.json())
-    .then(response => {
-      this.isSubmitting = false;
-      this.toastService.dismiss(loadingId);
+    this.http.post<any>(
+      'https://portkaviapi.techtigers.in/api/contact',
+      this.contactForm.value
+    ).subscribe({
+      next: (response) => {
+        this.isSubmitting = false;
+        this.toastService.dismiss(loadingId);
 
-      if (response.success) {
-        this.toastService.success('Message sent successfully!');
-        this.contactForm.reset();
-      } else {
-        this.toastService.error('Failed to send message.');
+        if (response?.success) {
+          this.toastService.success('Message sent successfully!');
+          this.contactForm.reset();
+        } else {
+          this.toastService.error('Failed to send message.');
+        }
+      },
+      error: (error) => {
+        this.isSubmitting = false;
+        this.toastService.dismiss(loadingId);
+        console.error('API Error:', error);
+        this.toastService.error('Server error. Please try again.');
       }
-    })
-    .catch(() => {
-      this.isSubmitting = false;
-      this.toastService.dismiss(loadingId);
-      this.toastService.error('Server error. Please try again.');
     });
 
   } else {
