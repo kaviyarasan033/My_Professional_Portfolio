@@ -91,7 +91,7 @@ export class ProjectsComponent implements AfterViewInit {
       title: 'Matrimony Platform',
       description: 'A full-stack matchmaking platform with advanced search algorithms, real-time chat, and secure user verification systems.',
       image: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=600&q=80',
-      tags: ['Angular', 'Node.js', 'PostgreSQL', 'Socket.io'],
+      tags: ['Laraval', 'Node.js', 'MySQL', 'Socket.io'],
       demoUrl: 'https://kettimelammatrimony.com/',
       githubUrl: '#'
     },
@@ -112,7 +112,7 @@ export class ProjectsComponent implements AfterViewInit {
       githubUrl: '#'
     },
     {
-      title: 'Global ERP System',
+      title: 'ERP System',
       description: 'Comprehensive Enterprise Resource Planning solution handling inventory, HR, finance, and supply chain management for multinational corporations.',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80',
       tags: ['Angular', 'Spring Boot', 'Oracle', 'Docker'],

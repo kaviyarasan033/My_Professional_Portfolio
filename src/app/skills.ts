@@ -106,7 +106,7 @@ export class SkillsComponent implements AfterViewInit {
       title: 'Database Systems',
       icon: 'storage',
       skills: [
-        { name: 'PostgreSQL', level: 90, icon: 'table_chart' },
+        { name: 'Firebase', level: 90, icon: 'table_chart' },
         { name: 'MySQL', level: 85, icon: 'table_chart' },
         { name: 'MongoDB', level: 85, icon: 'data_object' },
         { name: 'Redis', level: 75, icon: 'memory' }
