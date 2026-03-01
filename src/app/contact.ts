@@ -169,21 +169,39 @@ export class ContactComponent implements AfterViewInit {
     }
   }
 
-  onSubmit() {
-    if (this.contactForm.valid) {
-      this.isSubmitting = true;
-      const loadingId = this.toastService.loading('Sending message...');
-      
-      // Simulate API call
-      setTimeout(() => {
-        this.isSubmitting = false;
-        this.toastService.dismiss(loadingId);
+ onSubmit() {
+  if (this.contactForm.valid) {
+    this.isSubmitting = true;
+    const loadingId = this.toastService.loading('Sending message...');
+
+    fetch('https://portkaviapi.techtigers.in/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(this.contactForm.value)
+    })
+    .then(res => res.json())
+    .then(response => {
+      this.isSubmitting = false;
+      this.toastService.dismiss(loadingId);
+
+      if (response.success) {
         this.toastService.success('Message sent successfully!');
         this.contactForm.reset();
-      }, 1500);
-    } else {
-      this.contactForm.markAllAsTouched();
-      this.toastService.error('Please fill in all required fields correctly.');
-    }
+      } else {
+        this.toastService.error('Failed to send message.');
+      }
+    })
+    .catch(() => {
+      this.isSubmitting = false;
+      this.toastService.dismiss(loadingId);
+      this.toastService.error('Server error. Please try again.');
+    });
+
+  } else {
+    this.contactForm.markAllAsTouched();
+    this.toastService.error('Please fill in all required fields correctly.');
   }
+}
 }

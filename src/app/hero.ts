@@ -134,11 +134,11 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
 
       if (!isDeleting && charIndex === currentPhrase.length) {
         isDeleting = true;
-        typingSpeed = 2000; // Pause at end
+        typingSpeed = 2000; 
       } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         phraseIndex = (phraseIndex + 1) % this.phrases.length;
-        typingSpeed = 500; // Pause before new word
+        typingSpeed = 500; 
       }
 
       this.typingInterval = setTimeout(type, typingSpeed);
