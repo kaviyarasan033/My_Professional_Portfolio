@@ -7,7 +7,6 @@ export class ThemeService {
   isDarkMode = signal<boolean>(false);
 
   constructor() {
-    // Check local storage or system preference
     if (typeof window !== 'undefined') {
       const storedTheme = localStorage.getItem('theme');
       if (storedTheme === 'dark' || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
