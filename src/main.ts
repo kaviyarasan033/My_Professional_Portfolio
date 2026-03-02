@@ -6,8 +6,6 @@ bootstrapApplication(App, appConfig).catch((err) => console.error(err));
 
 const themes = [
 
-  { green: "#00C853", yellow: "#FFD600" },
-
   { green: "#7B1FA2", yellow: "#F48FB1" },
 
   { green: "#D32F2F", yellow: "#FFCC80" },
@@ -31,14 +29,8 @@ const themes = [
 
   { green: "#AFB42B", yellow: "#B9F6CA" },
 
- 
-  { green: "#5D4037", yellow: "#D7CCC8" },
-
-
   { green: "#00E676", yellow: "#FFEA00" },
 
-
-  { green: "#263238", yellow: "#FFC107" },
 ];
 
 
