@@ -10,6 +10,8 @@ import { ContactComponent } from './contact';
 import { FooterComponent } from './footer';
 import { ThemeService } from './theme.service';
 import { ToastContainerComponent } from './toast.component';
+import { ThreeBackgroundComponent } from './three-background.component';
+import { ScrollTransitionComponent } from './scroll-transition.component';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -25,33 +27,35 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
     ServicesComponent,
     ContactComponent,
     FooterComponent,
-    ToastContainerComponent
+    ToastContainerComponent,
+    ThreeBackgroundComponent,
+    ScrollTransitionComponent
   ],
   template: `
     <div class="min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-white transition-colors duration-300 font-sans selection:bg-primary-green/30 selection:text-primary-green relative overflow-x-hidden">
       
       <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden select-none">
-
-        <div class="absolute top-[45%] left-[2%] lg:left-[10%] opacity-40 blur-[2px] font-mono text-xs lg:text-sm bg-clip-text text-transparent bg-gradient-to-r from-primary-yellow to-amber-500 animate-[pulse_6s_ease-in-out_infinite_reverse]">
+        <app-three-background></app-three-background>
+        <div #code1 class="code-snippet absolute top-[45%] left-[2%] lg:left-[10%] opacity-40 blur-[2px] font-mono text-xs lg:text-sm bg-clip-text text-transparent bg-gradient-to-r from-primary-yellow to-amber-500">
           <pre><code>public function handle(Request $request) &#123;
     $user = User::findOrFail($id);
     return response()->json($user);
 &#125;</code></pre>
         </div>
 
-        <div class="absolute top-[10%] right-[10%] lg:right-[25%] opacity-40 blur-[1px] font-mono text-sm lg:text-base bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500 animate-[pulse_5s_ease-in-out_infinite]">
+        <div #code2 class="code-snippet absolute top-[10%] right-[10%] lg:right-[25%] opacity-40 blur-[1px] font-mono text-sm lg:text-base bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500">
           <pre><code>def process_data(df):
     df = df.dropna()
     return df.groupby('category').mean()</code></pre>
         </div>
 
-        <div class="absolute top-[75%] left-[10%] lg:left-[20%] opacity-30 blur-[2px] font-mono text-xs lg:text-sm bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500 animate-[pulse_7s_ease-in-out_infinite]">
+        <div #code3 class="code-snippet absolute top-[75%] left-[10%] lg:left-[20%] opacity-30 blur-[2px] font-mono text-xs lg:text-sm bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
           <pre><code>app.get('/api/data', (req, res) => &#123;
   res.status(200).send(&#123; status: 'ok' &#125;);
 &#125;);</code></pre>
         </div>
         
-        <div class="absolute top-[30%] right-[5%] lg:right-[15%] opacity-30 blur-[2px] font-mono text-xs lg:text-sm bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-orange-500 animate-[pulse_8s_ease-in-out_infinite_reverse]">
+        <div #code4 class="code-snippet absolute top-[30%] right-[5%] lg:right-[15%] opacity-30 blur-[2px] font-mono text-xs lg:text-sm bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-orange-500">
           <pre><code>&#64;Component(&#123;
   selector: 'app-root',
   standalone: true
@@ -162,12 +166,17 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
       <app-toast-container></app-toast-container>
       <app-navbar></app-navbar>
       
-      <main class="relative z-10">
+      <main class="relative z-10" #mainEl>
         <app-hero id="section-hero"></app-hero>
+        <app-scroll-transition title="Beyond Vision" subtitle="Discover" hint="Keep scrolling to continue the journey" />
         <app-about id="section-about"></app-about>
+        <app-scroll-transition title="Skills &amp; Tools" subtitle="Expertise" hint="Technologies I work with" />
         <app-skills id="section-skills"></app-skills>
+        <app-scroll-transition title="Featured Work" subtitle="Projects" hint="A selection of passionately crafted work" />
         <app-projects id="section-projects"></app-projects>
+        <app-scroll-transition title="What I Offer" subtitle="Services" hint="Solutions tailored to your needs" />
         <app-services id="section-services"></app-services>
+        <app-scroll-transition title="Let&#39;s Connect" subtitle="Contact" hint="Ready to build something together?" />
         <app-contact id="section-contact"></app-contact>
       </main>
       
@@ -223,7 +232,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 })
 export class App implements OnInit, AfterViewInit {
   @ViewChild('orbitCircle') orbitCircleRef!: ElementRef;
-  
+  @ViewChild('code1') code1Ref!: ElementRef;
+  @ViewChild('code2') code2Ref!: ElementRef;
+  @ViewChild('code3') code3Ref!: ElementRef;
+  @ViewChild('code4') code4Ref!: ElementRef;
+
   private themeService = inject(ThemeService);
   private platformId = inject(PLATFORM_ID);
 
@@ -290,6 +303,26 @@ export class App implements OnInit, AfterViewInit {
         filter: 'blur(16px)',
         opacity: 0.2,
         ease: "none"
+      });
+
+      const snippets = [
+        this.code1Ref.nativeElement,
+        this.code2Ref.nativeElement,
+        this.code3Ref.nativeElement,
+        this.code4Ref.nativeElement,
+      ];
+      const yOffsets = [80, -60, 100, -80];
+      snippets.forEach((el, i) => {
+        gsap.to(el, {
+          y: yOffsets[i],
+          scrollTrigger: {
+            trigger: "main",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 1.5,
+          },
+          ease: "none",
+        });
       });
 
       return () => {
