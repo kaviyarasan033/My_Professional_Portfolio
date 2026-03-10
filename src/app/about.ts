@@ -45,11 +45,11 @@ import { MatIconModule } from '@angular/material/icon';
             </h3>
             
             <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed about-item opacity-0">
-              I am a passionate Full Stack Developer and AI Automation Engineer with over 2 years of experience building scalable enterprise solutions. My expertise lies in architecting robust CRM and ERP systems that drive business efficiency.
+              I am <strong class="text-slate-800 dark:text-slate-200">Kaviyarasan M</strong>, an <strong class="text-slate-800 dark:text-slate-200">MCA (Master of Computer Applications)</strong> graduate and passionate Full Stack Developer & AI Automation Engineer with 2+ years of experience building scalable enterprise solutions. My expertise lies in architecting robust CRM and ERP systems that drive business efficiency.
             </p>
             
             <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed about-item opacity-0">
-              Recently, I've been pioneering the integration of AI agents and workflow automation (n8n) into traditional SaaS platforms, helping businesses transition into the intelligent era.
+              I have been pioneering the integration of AI agents and workflow automation (n8n) into traditional SaaS platforms, helping businesses transition into the intelligent era.
             </p>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 about-item opacity-0">
@@ -82,6 +82,14 @@ import { MatIconModule } from '@angular/material/icon';
                 <div>
                   <h4 class="font-semibold text-slate-900 dark:text-white">API Integration</h4>
                   <p class="text-sm text-slate-500 dark:text-slate-400">REST, GraphQL, Webhooks</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-4 rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700">
+                <mat-icon class="text-primary-green mt-0.5">school</mat-icon>
+                <div>
+                  <h4 class="font-semibold text-slate-900 dark:text-white">Education</h4>
+                  <p class="text-sm text-slate-500 dark:text-slate-400">MCA — Master of Computer Applications</p>
                 </div>
               </div>
             </div>

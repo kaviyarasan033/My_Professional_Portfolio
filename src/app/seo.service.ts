@@ -11,16 +11,16 @@ export class SeoService {
   private document = inject(DOCUMENT);
 
   setDefaultSeo(): void {
-    const pageTitle = 'Kaviyarasan M | Full Stack Developer & AI Automation Engineer';
-    const description = 'Kaviyarasan M is a Full Stack Developer & AI Automation Engineer with 5+ years of experience building scalable ERP, CRM, and SaaS platforms using Angular, React, Laravel, Node.js, and n8n AI agents.';
-    const url = 'https://kaviyarasan033.github.io/My_Professional_Portfolio/';
-    const image = 'https://kaviyarasan033.github.io/My_Professional_Portfolio/og-image.png';
+    const pageTitle = 'Kaviyarasan M | MCA Graduate | Full Stack Developer & AI Automation Engineer';
+    const description = 'Kaviyarasan M — MCA graduate, Full Stack Developer & AI Automation Engineer with 2+ years of experience building scalable ERP, CRM, and SaaS platforms using Angular, React, Laravel, Node.js, and n8n AI agents.';
+    const url = 'https://developerkavi.in/';
+    const image = 'https://developerkavi.in/og-image.png';
 
     this.title.setTitle(pageTitle);
 
     // Primary
     this.meta.updateTag({ name: 'description', content: description });
-    this.meta.updateTag({ name: 'keywords', content: 'Kaviyarasan M, Full Stack Developer, AI Automation Engineer, Angular Developer, React Developer, Laravel Developer, ERP Developer, CRM Developer, n8n Automation, Web Developer India, Portfolio' });
+    this.meta.updateTag({ name: 'keywords', content: 'Kaviyarasan M, Kaviyarasan, Kaviyarasan MCA, kavi developer, developer kavi, kavi MCA, kavi angular, kavi react, kavi laravel, kavi full stack, kaviyarasan033, mkaviyarasan003, Full Stack Developer, AI Automation Engineer, Angular Developer, React Developer, Laravel Developer, ERP Developer, CRM Developer, n8n Automation, Web Developer India, MCA Developer India, Portfolio' });
     this.meta.updateTag({ name: 'author', content: 'Kaviyarasan M' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' });
 
