@@ -9,6 +9,7 @@ import { ServicesComponent } from './services';
 import { ContactComponent } from './contact';
 import { FooterComponent } from './footer';
 import { ThemeService } from './theme.service';
+import { SeoService } from './seo.service';
 import { ToastContainerComponent } from './toast.component';
 import { ThreeBackgroundComponent } from './three-background.component';
 import { ScrollTransitionComponent } from './scroll-transition.component';
@@ -238,9 +239,12 @@ export class App implements OnInit, AfterViewInit {
   @ViewChild('code4') code4Ref!: ElementRef;
 
   private themeService = inject(ThemeService);
+  private seoService = inject(SeoService);
   private platformId = inject(PLATFORM_ID);
 
   ngOnInit() {
+    // Set SEO meta tags on both server and browser (SSR-friendly)
+    this.seoService.setDefaultSeo();
     if (isPlatformBrowser(this.platformId)) {
       this.themeService.isDarkMode();
     }

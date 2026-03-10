@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://kaviyarasan033.github.io/My_Professional_Portfolio/sitemap.xml

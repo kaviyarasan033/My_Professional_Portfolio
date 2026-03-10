@@ -9,14 +9,14 @@ import { MatIconModule } from '@angular/material/icon';
   standalone: true,
   imports: [MatIconModule],
   template: `
-    <section id="about" class="py-24 bg-transparent relative">
+    <section id="about" aria-labelledby="about-heading" class="py-24 bg-transparent relative">
       <!-- Decorative background elements -->
       <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-primary-green/5 blur-3xl pointer-events-none"></div>
       <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-primary-yellow/5 blur-3xl pointer-events-none"></div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" #aboutSection>
         <div class="text-center mb-16 about-item opacity-0">
-          <h2 class="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">About Me</h2>
+          <h2 id="about-heading" class="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">About Me</h2>
           <div class="w-20 h-1 bg-primary-green mx-auto rounded-full"></div>
         </div>
 
@@ -24,7 +24,7 @@ import { MatIconModule } from '@angular/material/icon';
           <div class="about-item opacity-0">
             <div class="relative rounded-2xl overflow-hidden shadow-2xl group">
               <div class="absolute inset-0 bg-gradient-to-tr from-primary-green/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
-              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Kaviyarasan M" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Kaviyarasan M — Full Stack Developer working at a computer" width="800" height="600" loading="lazy" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
               
               <!-- Floating badge -->
               <div class="absolute bottom-6 left-6 right-6 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md p-4 rounded-xl shadow-lg border border-white/20 dark:border-slate-700/50 z-20 flex items-center gap-4 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">

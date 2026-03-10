@@ -18,10 +18,10 @@ interface Project {
   standalone: true,
   imports: [CommonModule, MatIconModule],
   template: `
-    <section id="projects" class="py-24 bg-transparent relative">
+    <section id="projects" aria-labelledby="projects-heading" class="py-24 bg-transparent relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" #projectsSection>
         <div class="text-center mb-16 project-header opacity-0">
-          <h2 class="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">Featured Projects</h2>
+          <h2 id="projects-heading" class="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">Featured Projects</h2>
           <div class="w-20 h-1 bg-primary-green mx-auto rounded-full"></div>
           <p class="mt-4 text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
             A selection of enterprise-grade applications, AI automation tools, and scalable platforms I've built.
@@ -35,14 +35,14 @@ interface Project {
               <!-- Image Container -->
               <div class="relative h-48 overflow-hidden">
                 <div class="absolute inset-0 bg-slate-900/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-                <img [src]="project.image" [alt]="project.title" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer" />
+                <img [src]="project.image" [alt]="project.title + ' — Project by Kaviyarasan M'" loading="lazy" width="600" height="400" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer" />
                 
                 <!-- Overlay Actions -->
                 <div class="absolute inset-0 bg-slate-900/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
-                  <a [href]="project.demoUrl" target="_blank" class="w-10 h-10 rounded-full bg-primary-green flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg" aria-label="Live Demo">
+                  <a [href]="project.demoUrl" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-primary-green flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg" aria-label="Live Demo">
                     <mat-icon>launch</mat-icon>
                   </a>
-                  <a [href]="project.githubUrl" target="_blank" class="w-10 h-10 rounded-full bg-white text-slate-900 flex items-center justify-center hover:scale-110 transition-transform shadow-lg" aria-label="GitHub Repository">
+                  <a [href]="project.githubUrl" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white text-slate-900 flex items-center justify-center hover:scale-110 transition-transform shadow-lg" aria-label="GitHub Repository">
                     <mat-icon>code</mat-icon>
                   </a>
                 </div>
