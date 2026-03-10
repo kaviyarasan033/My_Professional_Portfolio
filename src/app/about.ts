@@ -45,7 +45,7 @@ import { MatIconModule } from '@angular/material/icon';
             </h3>
             
             <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed about-item opacity-0">
-              I am a passionate Full Stack Developer and AI Automation Engineer with over 5 years of experience building scalable enterprise solutions. My expertise lies in architecting robust CRM and ERP systems that drive business efficiency.
+              I am a passionate Full Stack Developer and AI Automation Engineer with over 2 years of experience building scalable enterprise solutions. My expertise lies in architecting robust CRM and ERP systems that drive business efficiency.
             </p>
             
             <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed about-item opacity-0">
