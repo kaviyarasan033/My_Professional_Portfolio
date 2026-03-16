@@ -32,7 +32,7 @@ import { MatIconModule } from '@angular/material/icon';
                   <mat-icon>workspace_premium</mat-icon>
                 </div>
                 <div>
-                  <p class="font-bold text-slate-900 dark:text-white">5+ Years</p>
+                  <p class="font-bold text-slate-900 dark:text-white">2+ Years</p>
                   <p class="text-sm text-slate-500 dark:text-slate-400">Professional Experience</p>
                 </div>
               </div>
