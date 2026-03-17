@@ -46,7 +46,7 @@ import { gsap } from 'gsap';
                 View Projects
               </a>
               <a href="#contact" class="px-8 py-4 rounded-full bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-medium border border-slate-200 dark:border-slate-800 hover:border-primary-green transition-all shadow-sm hover:shadow-md hover:-translate-y-1 text-center">
-                Contact Me <mat-icon>contact</mat-icon>
+                Contact Me 
               </a>
             </div>
 
