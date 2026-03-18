@@ -135,7 +135,7 @@ export class FirebaseService {
   async sendTokenToBackend(http: import('@angular/common/http').HttpClient, token: string): Promise<void> {
     try {
       await firstValueFrom(
-        http.post('/api/save-fcm-token', { token })
+        http.post('https://portkaviapi.techtigers.in/api/save-fcm-token', { token })
       );
     } catch (e) {
       // Non-critical: token storage failure shouldn't break UX

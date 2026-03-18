@@ -258,7 +258,7 @@ export class ContactComponent implements AfterViewInit, OnInit {
       const loadingId = this.toastService.loading('Sending message...');
 
       this.http.post<{ success: boolean }>(
-        '/api/contact', // Proxy configured in angular.json routes this to the backend
+        'https://portkaviapi.techtigers.in/api/contact',
         this.contactForm.value
       ).subscribe({
         next: async (response) => {
