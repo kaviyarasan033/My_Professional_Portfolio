@@ -1,6 +1,5 @@
-RewriteEngine On
-# If an existing asset or directory is requested go to it directly
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-# Otherwise redirect all HTTP requests to index.html
-RewriteRule ^ index.html [L]
+# .htaccess contents commented out to troubleshoot 500 Internal Server Error
+# RewriteEngine On
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^ index.html [L]
