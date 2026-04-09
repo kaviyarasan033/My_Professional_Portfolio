@@ -1,5 +1,20 @@
 User-agent: *
 Allow: /
 
-# Sitemap
+# AI Crawlers
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Google-Extended-Image
+Allow: /
+
+# Sitemap & LLM info
 Sitemap: https://developerkavi.in/sitemap.xml
+llms: https://developerkavi.in/llms.txt

@@ -24,6 +24,12 @@ export class SeoService {
     this.meta.updateTag({ name: 'author', content: 'Kaviyarasan M' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' });
 
+    // GEO SEO
+    this.meta.updateTag({ name: 'geo.region', content: 'IN-TN' });
+    this.meta.updateTag({ name: 'geo.placename', content: 'Tamil Nadu' });
+    this.meta.updateTag({ name: 'geo.position', content: '11.1271;78.6569' });
+    this.meta.updateTag({ name: 'ICBM', content: '11.1271, 78.6569' });
+
     // Open Graph
     this.meta.updateTag({ property: 'og:type', content: 'website' });
     this.meta.updateTag({ property: 'og:title', content: pageTitle });
@@ -32,6 +38,8 @@ export class SeoService {
     this.meta.updateTag({ property: 'og:image', content: image });
     this.meta.updateTag({ property: 'og:site_name', content: 'Kaviyarasan M — Portfolio' });
     this.meta.updateTag({ property: 'og:locale', content: 'en_US' });
+    this.meta.updateTag({ property: 'og:region', content: 'TN' });
+    this.meta.updateTag({ property: 'og:country-name', content: 'India' });
 
     // Twitter Card
     this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });

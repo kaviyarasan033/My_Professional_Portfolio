@@ -1,0 +1,33 @@
+# Kaviyarasan M — Full Stack Developer & AI Automation Engineer
+
+Profile of Kaviyarasan M, an MCA graduate with 2+ years of experience in full-stack development, AI automation, and enterprise architecture.
+
+## Role & Expertise
+- **Core Roles**: Full Stack Developer, AI Automation Engineer, ERP/CRM Architect.
+- **Location**: Tamil Nadu, India (Available Worldwide / Remote).
+- **Education**: Master of Computer Applications (MCA).
+
+## Technical Stack
+- **Frontend**: Angular, React, Vue, TypeScript, Tailwind CSS.
+- **Backend**: Node.js, PHP (Laravel), Python (FastAPI).
+- **Databases**: MongoDB, MySQL, PostgreSQL, Redis.
+- **AI & Automation**: n8n, AI Agents, Chatbots, Workflow Automation.
+- **DevOps**: Docker, AWS, Firebase, Git.
+
+## Key Projects
+- **SaaS Platforms**: Scalable enterprise solutions and cloud-native apps.
+- **ERP & CRM**: Custom business management systems built for efficiency.
+- **AI Integration**: Pioneering AI agent integration into traditional SaaS stacks.
+
+## Contact & Links
+- **Website**: [developerkavi.in](https://developerkavi.in/)
+- **Email**: mkaviyarasan003@gmail.com
+- **LinkedIn**: [kaviyarasan-m-172542299](https://www.linkedin.com/in/kaviyarasan-m-172542299)
+- **GitHub**: [kaviyarasan033](https://github.com/kaviyarasan033)
+- **WhatsApp**: [+918618924949](https://wa.me/8618924949)
+
+## Professional Services
+- Custom Web Application Development
+- AI Workflow Automation (n8n)
+- CRM/ERP System Architecture
+- API Design & Integration
