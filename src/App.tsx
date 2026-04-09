@@ -86,6 +86,7 @@ const AppContent: React.FC = () => {
             start: "top top",
             end: "bottom bottom",
             scrub: 1.5,
+          },
           ease: "none",
         });
       });
