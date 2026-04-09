@@ -24,14 +24,15 @@
               "GEMINI_API_KEY": "'YOUR_GEMINI_API_KEY'"
             },
             "outputPath": "dist/app",
+            "baseHref": "/",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
+            "prerender": true,
             "assets": [
               {
                 "glob": "**/*",
                 "input": "public"
-              },
-              "public/.htaccess"
+              }
             ],
             "styles": [
               "src/styles.css"

@@ -39,6 +39,9 @@ jobs:
           LIGHTNINGCSS_USE_WASM: "true"
         run: npm run build
 
+      - name: List Build Output (Debug)
+        run: ls -R dist/app
+
       - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -48,5 +51,5 @@ jobs:
           protocol: ftps
           port: 21
           local-dir: dist/app/browser/
-          server-dir: /developerkavi/
+          server-dir: ./developerkavi/
           dangerous-clean-slate: true
