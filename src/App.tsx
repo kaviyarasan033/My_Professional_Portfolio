@@ -17,7 +17,6 @@ import ScrollTransition from './components/ScrollTransition';
 const AppContent: React.FC = () => {
   const orbitCircleRef = useRef<HTMLDivElement>(null);
   const codeRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const { isDarkMode } = useTheme();
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
