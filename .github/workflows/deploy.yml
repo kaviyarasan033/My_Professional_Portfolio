@@ -48,5 +48,5 @@ jobs:
           protocol: ftps
           port: 21
           local-dir: dist/app/browser/
-          server-dir: /
+          server-dir: /developerkavi/
           dangerous-clean-slate: true
