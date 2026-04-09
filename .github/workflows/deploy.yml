@@ -37,6 +37,7 @@ jobs:
       - name: Build React App
         env:
           LIGHTNINGCSS_USE_WASM: "true"
+          CI: false
         run: npm run build
 
       - name: List Build Output (Debug)
@@ -52,4 +53,4 @@ jobs:
           port: 21
           local-dir: dist/
           server-dir: /
-          dangerous-clean-slate: true
+          dangerous-clean-slate: false

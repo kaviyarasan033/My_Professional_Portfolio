@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ThemeProvider, useTheme } from './context/ThemeContext';
+import { ThemeProvider } from './context/ThemeContext';
 import { ToastProvider } from './context/ToastContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -86,7 +86,6 @@ const AppContent: React.FC = () => {
             start: "top top",
             end: "bottom bottom",
             scrub: 1.5,
-          },
           ease: "none",
         });
       });
