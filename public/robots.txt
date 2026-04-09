@@ -15,7 +15,6 @@ Allow: /
 User-agent: Google-Extended-Image
 Allow: /
  
- 
 # Sitemap & LLM info
 Sitemap: https://developerkavi.in/sitemap.xml
 llms: https://developerkavi.in/llms.txt
