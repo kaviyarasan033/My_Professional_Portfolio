@@ -49,4 +49,4 @@ jobs:
           port: 21
           local-dir: dist/app/browser/
           server-dir: /
-          dangerous-clean-slate: false
+          dangerous-clean-slate: true
