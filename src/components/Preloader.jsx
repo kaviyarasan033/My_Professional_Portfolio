@@ -22,66 +22,68 @@ export default function Preloader() {
       },
     });
 
-    // 1. Initial entrance: big logo appears smoothly
+    // 1. Initial entrance: big logo appears calmly and settles
     if (logoWrapperRef.current) {
       tl.fromTo(
         logoWrapperRef.current,
         { scale: 0.88, opacity: 0 },
-        { scale: 1, opacity: 1, duration: 0.65, ease: "power2.out" }
+        { scale: 1, opacity: 1, duration: 0.75, ease: "power2.out" }
       );
     }
 
-    // 2. Shine overlay sweeps left to right across the large logo
+    // 2. Pause & wait before shine starts, letting user view the logo
+    // 3. Optical Glass Glance Shine sweeps smoothly from left to right with high glowiness
     if (shineRef.current) {
       tl.fromTo(
         shineRef.current,
-        { x: "-110%" },
-        { x: "110%", duration: 0.95, ease: "power2.inOut" },
-        "+=0.1"
+        { x: "-130%" },
+        { x: "130%", duration: 1.8, ease: "power1.inOut" },
+        "+=0.35"
       );
     }
 
-    // 3. After preload: smooth zoom and radiant shine bloom
+    // 4. Momentary pause after shine, then small-to-big zoom with radiant bloom
     if (logoWrapperRef.current) {
       tl.to(
         logoWrapperRef.current,
         {
-          scale: 1.3,
-          filter: "brightness(2) drop-shadow(0 0 45px rgba(255, 255, 255, 0.95))",
+          scale: 1.35,
+          filter:
+            "brightness(2.2) drop-shadow(0 0 40px #ffffff) drop-shadow(0 0 70px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 100px rgba(199, 156, 101, 0.8))",
           opacity: 0,
-          duration: 0.65,
+          duration: 0.7,
           ease: "power2.in",
         },
-        "+=0.12"
+        "+=0.2"
       );
     }
 
-    // 4. SVG wave curtain morphing
+    // 5. SVG wave curtain morphing
     if (pathRef.current) {
       tl.to(
         pathRef.current,
         {
-          duration: 0.35,
+          duration: 0.38,
           attr: { d: curve },
           ease: "power2.in",
         },
-        "-=0.4"
+        "-=0.45"
       ).to(pathRef.current, {
-        duration: 0.5,
+        duration: 0.55,
         attr: { d: flat },
         ease: "power2.out",
       });
     }
 
-    // 5. Preloader curtain slide up
+    // 6. Preloader curtain slide up smoothly
     tl.to(
       preloaderRef.current,
       {
         y: -1500,
-        duration: 0.85,
+        duration: 0.9,
         ease: "power2.inOut",
       },
-      "-=0.25"
+      "-=0.3"
     );
   }, []);
 
@@ -105,7 +107,7 @@ export default function Preloader() {
         overflow: "hidden",
       }}
     >
-      {/* Background SVG Wave Curtain in Pure Black */}
+      {/* Background SVG Wave Curtain in Pure Solid Black — No background glow */}
       <svg
         viewBox="0 0 1000 1000"
         preserveAspectRatio="none"
@@ -126,7 +128,7 @@ export default function Preloader() {
         ></path>
       </svg>
 
-      {/* Prominent Large Logo Wrapper — Pure black background, no card/border */}
+      {/* Prominent Large Logo on Solid Black Backdrop */}
       <div
         ref={logoWrapperRef}
         style={{
@@ -135,22 +137,22 @@ export default function Preloader() {
           display: "inline-block",
         }}
       >
-        {/* Large High-Resolution Logo */}
+        {/* Large Crisp Logo */}
         <img
           src="/images/logokavi.png"
           alt="KaviScript Logo"
           style={{
-            maxHeight: "145px",
+            maxHeight: "150px",
             height: "auto",
-            width: "clamp(340px, 46vw, 560px)",
+            width: "clamp(340px, 46vw, 580px)",
             maxWidth: "92vw",
             objectFit: "contain",
             display: "block",
-            filter: "drop-shadow(0 6px 20px rgba(0, 0, 0, 0.7))",
+            filter: "drop-shadow(0 8px 24px rgba(0, 0, 0, 0.8))",
           }}
         />
 
-        {/* Shine Layer — Masked Strictly to the Big Logo Silhouette */}
+        {/* Shine Layer — Strictly Masked to Logo Pixels Only */}
         <div
           style={{
             position: "absolute",
@@ -165,21 +167,40 @@ export default function Preloader() {
             maskPosition: "center",
             pointerEvents: "none",
             overflow: "hidden",
+            mixBlendMode: "screen",
           }}
         >
+          {/* Intense Radiant Glowing Beam Sweeping Left-to-Right */}
           <div
             ref={shineRef}
             style={{
               position: "absolute",
-              top: "-50%",
-              left: "-50%",
-              width: "250%",
-              height: "200%",
+              top: "-60%",
+              left: "-60%",
+              width: "280%",
+              height: "220%",
               background:
-                "linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.95) 50%, transparent 70%)",
-              transform: "translateX(-110%)",
+                "linear-gradient(110deg, transparent 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.45) 43%, rgba(255, 255, 255, 1) 48.5%, #ffffff 50%, rgba(255, 255, 255, 1) 51.5%, rgba(255, 255, 255, 0.45) 57%, rgba(255, 255, 255, 0.05) 70%, transparent 85%)",
+              filter:
+                "drop-shadow(0 0 18px #ffffff) drop-shadow(0 0 36px #ffffff) drop-shadow(0 0 70px rgba(255, 255, 255, 0.95)) drop-shadow(0 0 110px rgba(212, 175, 55, 0.85))",
+              transform: "translateX(-130%)",
             }}
-          />
+          >
+            {/* Ultra-luminous center laser streak for maximum shine glowiness */}
+            <div
+              style={{
+                position: "absolute",
+                top: 0,
+                bottom: 0,
+                left: "50%",
+                width: "4px",
+                transform: "translateX(-50%) rotate(20deg)",
+                background: "#ffffff",
+                boxShadow:
+                  "0 0 25px 12px #ffffff, 0 0 50px 24px rgba(255, 255, 255, 0.9), 0 0 80px 36px rgba(212, 175, 55, 0.8)",
+              }}
+            />
+          </div>
         </div>
       </div>
     </div>
