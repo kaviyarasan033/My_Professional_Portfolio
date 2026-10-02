@@ -1,0 +1,16 @@
+.wpb_kavi_block .vc_element-icon,
+#kavi_block .vc_element-icon {
+    font-family: dashicons;
+    font-size: 30px;
+    color: #54ab26;
+    font-weight: 400;
+    background-image: none;
+}
+
+#kavi_block .vc_element-icon.dashicons-clipboard:before {
+    vertical-align: middle;
+}
+
+#available-widgets [class*="reusable_block"] .widget-title:before {
+    content: "\f481";
+}
