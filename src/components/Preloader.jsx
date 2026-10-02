@@ -9,7 +9,6 @@ export default function Preloader() {
   const pathRef = useRef(null);
   const logoWrapperRef = useRef(null);
   const shineRef = useRef(null);
-  const ringRef = useRef(null);
 
   useEffect(() => {
     if (!preloaderRef.current) return;
@@ -23,51 +22,41 @@ export default function Preloader() {
       },
     });
 
-    // 1. Initial logo entrance: gentle scale from small
+    // 1. Initial entrance: logo appears gently
     if (logoWrapperRef.current) {
       tl.fromTo(
         logoWrapperRef.current,
-        { scale: 0.7, opacity: 0 },
-        { scale: 1, opacity: 1, duration: 0.7, ease: "power2.out" }
+        { scale: 0.85, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 0.6, ease: "power2.out" }
       );
     }
 
-    // 2. Surrounding ring spin & pulse
-    if (ringRef.current) {
-      gsap.to(ringRef.current, {
-        rotate: 360,
-        duration: 4,
-        repeat: -1,
-        ease: "linear",
-      });
-    }
-
-    // 3. Image overlay shine sweeping from left to right
+    // 2. Shine overlay sweeps left to right ONLY on the logo
     if (shineRef.current) {
       tl.fromTo(
         shineRef.current,
-        { x: "-130%", opacity: 0 },
-        { x: "160%", opacity: 1, duration: 0.85, ease: "power2.inOut" },
-        "-=0.2"
+        { x: "-100%" },
+        { x: "100%", duration: 0.9, ease: "power2.inOut" },
+        "+=0.1"
       );
     }
 
-    // 4. After preload: small to big zoom with radiant shine bloom
+    // 3. After preload: small to big zoom and intense shine bloom
     if (logoWrapperRef.current) {
       tl.to(
         logoWrapperRef.current,
         {
-          scale: 1.35,
-          filter: "brightness(1.6) drop-shadow(0 0 35px rgba(255, 255, 255, 0.95)) drop-shadow(0 0 60px rgba(199, 156, 101, 0.8))",
+          scale: 1.4,
+          filter: "brightness(2) drop-shadow(0 0 35px rgba(255, 255, 255, 0.95))",
           opacity: 0,
           duration: 0.65,
           ease: "power2.in",
         },
-        "+=0.15"
+        "+=0.1"
       );
     }
 
-    // 5. SVG wave morphing
+    // 4. SVG wave curtain morphing
     if (pathRef.current) {
       tl.to(
         pathRef.current,
@@ -84,12 +73,12 @@ export default function Preloader() {
       });
     }
 
-    // 6. Preloader container slide up
+    // 5. Preloader curtain slide up
     tl.to(
       preloaderRef.current,
       {
         y: -1500,
-        duration: 0.85,
+        duration: 0.8,
         ease: "power2.inOut",
       },
       "-=0.25"
@@ -112,11 +101,11 @@ export default function Preloader() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#111013",
+        backgroundColor: "#000000",
         overflow: "hidden",
       }}
     >
-      {/* Background SVG Wave Curtain */}
+      {/* Background SVG Wave Curtain in Pure Black */}
       <svg
         viewBox="0 0 1000 1000"
         preserveAspectRatio="none"
@@ -126,7 +115,7 @@ export default function Preloader() {
           left: 0,
           width: "100%",
           height: "100%",
-          fill: "#111013",
+          fill: "#000000",
           zIndex: 1,
         }}
       >
@@ -137,103 +126,61 @@ export default function Preloader() {
         ></path>
       </svg>
 
-      {/* Center Logo Area with Surrounding Animation and Shine */}
+      {/* Pure Logo Wrapper — No card, no border, pure black backdrop */}
       <div
         ref={logoWrapperRef}
         style={{
           position: "relative",
           zIndex: 10,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: "30px 45px",
+          display: "inline-block",
         }}
       >
-        {/* Ambient Halo Glow */}
-        <div
+        {/* Base Logo Image */}
+        <img
+          src="/images/logokavi.png"
+          alt="KaviScript Logo"
           style={{
-            position: "absolute",
-            width: "320px",
-            height: "180px",
-            borderRadius: "50%",
-            background:
-              "radial-gradient(ellipse at center, rgba(199, 156, 101, 0.35) 0%, rgba(255, 107, 107, 0.15) 45%, transparent 70%)",
-            filter: "blur(24px)",
-            pointerEvents: "none",
-            animation: "pulseHalo 2s ease-in-out infinite alternate",
+            maxHeight: "72px",
+            height: "72px",
+            width: "auto",
+            maxWidth: "280px",
+            objectFit: "contain",
+            display: "block",
           }}
         />
 
-        {/* Rotating Surrounding Accent Ring */}
+        {/* Shine Layer — Masked Strictly to the Logo Graphics Only */}
         <div
-          ref={ringRef}
           style={{
             position: "absolute",
-            width: "280px",
-            height: "140px",
-            borderRadius: "40px",
-            border: "1.5px solid transparent",
-            background:
-              "linear-gradient(#111013, #111013) padding-box, linear-gradient(135deg, rgba(199,156,101,0.8), rgba(255,107,107,0.3), rgba(199,156,101,0.8)) border-box",
-            boxShadow:
-              "0 0 25px rgba(199, 156, 101, 0.25), inset 0 0 15px rgba(199, 156, 101, 0.15)",
+            inset: 0,
+            WebkitMaskImage: "url('/images/logokavi.png')",
+            maskImage: "url('/images/logokavi.png')",
+            WebkitMaskSize: "contain",
+            maskSize: "contain",
+            WebkitMaskRepeat: "no-repeat",
+            maskRepeat: "no-repeat",
+            WebkitMaskPosition: "center",
+            maskPosition: "center",
             pointerEvents: "none",
-          }}
-        />
-
-        {/* Logo Container with Left-to-Right Shine Sweep */}
-        <div
-          style={{
-            position: "relative",
-            display: "inline-block",
             overflow: "hidden",
-            borderRadius: "16px",
-            padding: "8px 16px",
           }}
         >
-          <img
-            src="/images/logokavi.png"
-            alt="KaviScript Logo"
-            style={{
-              maxHeight: "68px",
-              height: "68px",
-              width: "auto",
-              maxWidth: "260px",
-              objectFit: "contain",
-              display: "block",
-              filter: "drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6))",
-            }}
-          />
-
-          {/* Overlay Metallic / Glass Shine Sweep Left to Right */}
           <div
             ref={shineRef}
             style={{
               position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
+              top: "-50%",
+              left: "-50%",
+              width: "200%",
+              height: "200%",
               background:
-                "linear-gradient(110deg, transparent 20%, rgba(255, 255, 255, 0.65) 45%, rgba(255, 255, 255, 0.95) 50%, rgba(255, 255, 255, 0.65) 55%, transparent 80%)",
-              pointerEvents: "none",
-              mixBlendMode: "screen",
-              transform: "skewX(-20deg)",
+                "linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, 0.95) 50%, transparent 65%)",
+              transform: "translateX(-100%)",
             }}
           />
         </div>
       </div>
-
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-            @keyframes pulseHalo {
-              0% { transform: scale(0.92); opacity: 0.6; }
-              100% { transform: scale(1.15); opacity: 0.95; }
-            }
-          `,
-        }}
-      />
     </div>
   );
 }
