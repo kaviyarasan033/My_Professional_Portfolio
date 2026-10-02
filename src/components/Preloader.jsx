@@ -22,37 +22,37 @@ export default function Preloader() {
       },
     });
 
-    // 1. Initial entrance: logo appears gently
+    // 1. Initial entrance: big logo appears smoothly
     if (logoWrapperRef.current) {
       tl.fromTo(
         logoWrapperRef.current,
-        { scale: 0.85, opacity: 0 },
-        { scale: 1, opacity: 1, duration: 0.6, ease: "power2.out" }
+        { scale: 0.88, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 0.65, ease: "power2.out" }
       );
     }
 
-    // 2. Shine overlay sweeps left to right ONLY on the logo
+    // 2. Shine overlay sweeps left to right across the large logo
     if (shineRef.current) {
       tl.fromTo(
         shineRef.current,
-        { x: "-100%" },
-        { x: "100%", duration: 0.9, ease: "power2.inOut" },
+        { x: "-110%" },
+        { x: "110%", duration: 0.95, ease: "power2.inOut" },
         "+=0.1"
       );
     }
 
-    // 3. After preload: small to big zoom and intense shine bloom
+    // 3. After preload: smooth zoom and radiant shine bloom
     if (logoWrapperRef.current) {
       tl.to(
         logoWrapperRef.current,
         {
-          scale: 1.4,
-          filter: "brightness(2) drop-shadow(0 0 35px rgba(255, 255, 255, 0.95))",
+          scale: 1.3,
+          filter: "brightness(2) drop-shadow(0 0 45px rgba(255, 255, 255, 0.95))",
           opacity: 0,
           duration: 0.65,
           ease: "power2.in",
         },
-        "+=0.1"
+        "+=0.12"
       );
     }
 
@@ -78,7 +78,7 @@ export default function Preloader() {
       preloaderRef.current,
       {
         y: -1500,
-        duration: 0.8,
+        duration: 0.85,
         ease: "power2.inOut",
       },
       "-=0.25"
@@ -126,7 +126,7 @@ export default function Preloader() {
         ></path>
       </svg>
 
-      {/* Pure Logo Wrapper — No card, no border, pure black backdrop */}
+      {/* Prominent Large Logo Wrapper — Pure black background, no card/border */}
       <div
         ref={logoWrapperRef}
         style={{
@@ -135,21 +135,22 @@ export default function Preloader() {
           display: "inline-block",
         }}
       >
-        {/* Base Logo Image */}
+        {/* Large High-Resolution Logo */}
         <img
           src="/images/logokavi.png"
           alt="KaviScript Logo"
           style={{
-            maxHeight: "72px",
-            height: "72px",
-            width: "auto",
-            maxWidth: "280px",
+            maxHeight: "145px",
+            height: "auto",
+            width: "clamp(340px, 46vw, 560px)",
+            maxWidth: "92vw",
             objectFit: "contain",
             display: "block",
+            filter: "drop-shadow(0 6px 20px rgba(0, 0, 0, 0.7))",
           }}
         />
 
-        {/* Shine Layer — Masked Strictly to the Logo Graphics Only */}
+        {/* Shine Layer — Masked Strictly to the Big Logo Silhouette */}
         <div
           style={{
             position: "absolute",
@@ -172,11 +173,11 @@ export default function Preloader() {
               position: "absolute",
               top: "-50%",
               left: "-50%",
-              width: "200%",
+              width: "250%",
               height: "200%",
               background:
-                "linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, 0.95) 50%, transparent 65%)",
-              transform: "translateX(-100%)",
+                "linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.95) 50%, transparent 70%)",
+              transform: "translateX(-110%)",
             }}
           />
         </div>
