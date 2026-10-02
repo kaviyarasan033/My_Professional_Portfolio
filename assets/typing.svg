@@ -1,0 +1,17 @@
+<svg width="850" height="60" viewBox="0 0 850 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .font-mono { font-family: 'Fira Code', 'Cascadia Code', Consolas, Monaco, monospace; }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    .cursor { animation: blink 0.8s infinite; fill: #ef4444; }
+  </style>
+
+  <rect x="1" y="1" width="848" height="58" rx="12" fill="#080e0b" stroke="#166534" stroke-width="1.2"/>
+
+  <g transform="translate(20, 35)">
+    <text x="0" y="0" fill="#22c55e" font-size="13" font-weight="700" class="font-mono">kaviyarasan@cloud:~$</text>
+    <text x="170" y="0" fill="#f8fafc" font-size="12.5" font-weight="500" class="font-mono">
+      <tspan fill="#38bdf8">next build</tspan> &amp;&amp; <tspan fill="#fca5a5">python agent_llm.py</tspan> &amp;&amp; <tspan fill="#4ade80">kubectl</tspan> apply -f k8s/ &amp;&amp; <tspan fill="#f87171">nginx</tspan> -s reload
+    </text>
+    <rect x="795" y="-12" width="8" height="15" class="cursor"/>
+  </g>
+</svg>

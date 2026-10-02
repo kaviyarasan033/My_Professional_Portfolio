@@ -1,0 +1,47 @@
+<svg width="415" height="195" viewBox="0 0 415 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fireBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444">
+        <animate attributeName="stop-color" values="#ef4444;#dc2626;#ef4444" dur="3s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    .font-mono { font-family: 'Fira Code', monospace; }
+    
+    @keyframes fireGlow {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 4px #ef4444); }
+      50% { transform: scale(1.1); filter: drop-shadow(0 0 10px #ef4444); }
+    }
+    .fire-pulse { animation: fireGlow 1.8s infinite ease-in-out; transform-origin: 0 0; }
+  </style>
+
+  <rect width="415" height="195" rx="12" fill="#080c0a" stroke="url(#fireBorder)" stroke-width="1.4"/>
+
+  <!-- Center Circle Streak Icon -->
+  <g transform="translate(207, 45)">
+    <circle cx="0" cy="0" r="24" fill="#450a0a" stroke="#ef4444" stroke-width="2"/>
+    <text x="0" y="7" font-size="18" text-anchor="middle" class="fire-pulse">🔥</text>
+  </g>
+
+  <!-- 3 Streak Columns -->
+  <g transform="translate(75, 115)">
+    <text x="0" y="0" fill="#f8fafc" font-size="22" font-weight="800" text-anchor="middle" class="font-sans">459</text>
+    <text x="0" y="18" fill="#f87171" font-size="11" font-weight="600" text-anchor="middle" class="font-mono">Total Commits</text>
+    <text x="0" y="32" fill="#64748b" font-size="9" text-anchor="middle" class="font-mono">2026 Cycle</text>
+  </g>
+
+  <g transform="translate(207, 115)">
+    <text x="0" y="0" fill="#22c55e" font-size="24" font-weight="900" text-anchor="middle" class="font-sans">ACTIVE</text>
+    <text x="0" y="18" fill="#4ade80" font-size="11" font-weight="700" text-anchor="middle" class="font-mono">Current Streak</text>
+    <text x="0" y="32" fill="#86efac" font-size="9" text-anchor="middle" class="font-mono">Daily Consistency</text>
+  </g>
+
+  <g transform="translate(340, 115)">
+    <text x="0" y="0" fill="#f8fafc" font-size="22" font-weight="800" text-anchor="middle" class="font-sans">99.8%</text>
+    <text x="0" y="18" fill="#f87171" font-size="11" font-weight="600" text-anchor="middle" class="font-mono">Success Rate</text>
+    <text x="0" y="32" fill="#64748b" font-size="9" text-anchor="middle" class="font-mono">Deployment SLA</text>
+  </g>
+</svg>

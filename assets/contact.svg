@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="850" height="310" viewBox="0 0 850 310" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="contactBg" x1="0" y1="0" x2="850" y2="310" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#060c09"/>
+      <stop offset="50%" stop-color="#0c1410"/>
+      <stop offset="100%" stop-color="#14080a"/>
+    </linearGradient>
+    <linearGradient id="contactBorder" x1="0" y1="0" x2="850" y2="310" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .font-mono { font-family: 'Fira Code', 'Cascadia Code', Consolas, Monaco, monospace; }
+  </style>
+
+  <!-- Frame -->
+  <rect x="1" y="1" width="848" height="308" rx="16" fill="url(#contactBg)"/>
+  <rect x="1" y="1" width="848" height="308" rx="16" stroke="url(#contactBorder)" stroke-width="1.5"/>
+
+  <!-- Glowing Accents -->
+  <circle cx="100" cy="150" r="80" fill="#22c55e" opacity="0.08" filter="blur(30px)"/>
+  <circle cx="750" cy="150" r="80" fill="#ef4444" opacity="0.08" filter="blur(30px)"/>
+
+  <!-- Content -->
+  <g transform="translate(50, 45)">
+    <!-- Sub-heading -->
+    <text x="0" y="0" fill="#f87171" font-size="13" font-weight="700" letter-spacing="2" class="font-mono">GET IN TOUCH // INITIATE TRANSMISSION</text>
+    
+    <!-- Headline -->
+    <text x="0" y="38" fill="#ffffff" font-size="30" font-weight="900" class="font-sans">Let's Build Something Extraordinary Together</text>
+    
+    <!-- Description -->
+    <text x="0" y="70" fill="#94a3b8" font-size="14" class="font-sans">
+      Full Stack Web Development, VPS Infrastructure, CI/CD Automations &amp; API Systems.
+    </text>
+    <text x="0" y="92" fill="#94a3b8" font-size="14" class="font-sans">
+      Explore <tspan fill="#4ade80" font-weight="700">developerkavi.in</tspan> or email directly to collaborate.
+    </text>
+
+    <!-- Email Badge Card -->
+    <g transform="translate(0, 125)">
+      <rect width="450" height="54" rx="12" fill="#0d1813" stroke="#22c55e" stroke-width="1.5"/>
+      <circle cx="30" cy="27" r="14" fill="#052e16"/>
+      <text x="30" y="32" fill="#4ade80" font-size="15" text-anchor="middle">✉️</text>
+      <text x="60" y="24" fill="#64748b" font-size="10" font-weight="700" class="font-mono">PRIMARY EMAIL ADDRESS</text>
+      <text x="60" y="42" fill="#4ade80" font-size="16" font-weight="800" class="font-mono">mkaviyarasan003@gmail.com</text>
+    </g>
+
+    <!-- CTA Button Badge (Right) -->
+    <g transform="translate(470, 125)">
+      <rect width="280" height="54" rx="12" fill="#450a0a" stroke="#ef4444" stroke-width="1.5"/>
+      <text x="140" y="25" fill="#fca5a5" font-size="11" font-weight="700" text-anchor="middle" class="font-mono">DIRECT DISPATCH</text>
+      <text x="140" y="43" fill="#ffffff" font-size="14" font-weight="800" text-anchor="middle" class="font-sans">Click to Send Message ➔</text>
+    </g>
+  </g>
+
+  <!-- Bottom Indicator -->
+  <g transform="translate(50, 265)">
+    <circle cx="6" cy="6" r="4" fill="#22c55e"/>
+    <text x="20" y="10" fill="#86efac" font-size="11" font-weight="600" class="font-mono">STATUS: ACTIVE &amp; RESPONSIVE WITHIN 24 HOURS</text>
+  </g>
+</svg>

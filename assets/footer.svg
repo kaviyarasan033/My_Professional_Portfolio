@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="850" height="100" viewBox="0 0 850 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="footerBg" x1="0" y1="0" x2="850" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#060c09"/>
+      <stop offset="100%" stop-color="#12080a"/>
+    </linearGradient>
+    <linearGradient id="footerBorder" x1="0" y1="0" x2="850" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .font-mono { font-family: 'Fira Code', 'Cascadia Code', Consolas, Monaco, monospace; }
+  </style>
+
+  <!-- Frame -->
+  <rect x="1" y="1" width="848" height="98" rx="14" fill="url(#footerBg)"/>
+  <rect x="1" y="1" width="848" height="98" rx="14" stroke="url(#footerBorder)" stroke-width="1.2"/>
+
+  <!-- Footer Content -->
+  <g transform="translate(425, 42)">
+    <text x="0" y="0" fill="#f8fafc" font-size="14" font-weight="700" text-anchor="middle" class="font-sans">
+      Designed &amp; Engineered by <tspan fill="#4ade80">Kaviyarasan M</tspan>
+    </text>
+    <text x="0" y="24" fill="#f87171" font-size="11.5" font-weight="600" text-anchor="middle" class="font-mono">
+      🌐 https://developerkavi.in • ALL SYSTEMS OPERATIONAL
+    </text>
+  </g>
+</svg>

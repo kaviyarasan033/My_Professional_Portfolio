@@ -1,0 +1,192 @@
+<svg width="850" height="760" viewBox="0 0 850 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skillsBg" x1="0" y1="0" x2="850" y2="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#060c09"/>
+      <stop offset="100%" stop-color="#0f1612"/>
+    </linearGradient>
+    <linearGradient id="skillsBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e">
+        <animate attributeName="stop-color" values="#22c55e;#ef4444;#22c55e" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#ef4444">
+        <animate attributeName="stop-color" values="#ef4444;#22c55e;#ef4444" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    .font-mono { font-family: 'Fira Code', Consolas, monospace; }
+  </style>
+
+  <rect x="1" y="1" width="848" height="758" rx="16" fill="url(#skillsBg)"/>
+  <rect x="1" y="1" width="848" height="758" rx="16" stroke="url(#skillsBorder)" stroke-width="1.6"/>
+
+  <!-- Title -->
+  <g transform="translate(35, 36)">
+    <circle cx="6" cy="6" r="6" fill="#22c55e"/>
+    <text x="22" y="10" fill="#f8fafc" font-size="16" font-weight="800" class="font-sans">FULLSTACK, AI LLM, CLOUD &amp; DEVOPS TOOLING MATRIX</text>
+    <text x="780" y="10" fill="#4ade80" font-size="12" font-weight="700" text-anchor="end" class="font-mono">developerkavi.in</text>
+  </g>
+
+  <!-- 6 Categories (2 Columns x 3 Big Pillars) -->
+
+  <!-- Pillar 1: AI, Python LLM & APIs (Top Left) -->
+  <g transform="translate(35, 60)">
+    <rect width="370" height="210" rx="12" fill="#180c0e" stroke="#ef4444" stroke-width="1.3"/>
+    <text x="18" y="26" fill="#f87171" font-size="13" font-weight="800" class="font-mono">🤖 AI, PYTHON LLM &amp; APIS</text>
+    
+    <!-- Item 1: Python & LLMs -->
+    <g transform="translate(18, 42)">
+      <rect width="334" height="42" rx="8" fill="#450a0a" stroke="#ef4444" stroke-width="0.8"/>
+      <text x="12" y="18" fill="#ffffff" font-size="12.5" font-weight="700" class="font-sans">Python / LLM Agents &amp; LangChain</text>
+      <text x="12" y="32" fill="#fca5a5" font-size="10" class="font-mono">Prompt Engineering • RAG Vectors • Ollama</text>
+    </g>
+
+    <!-- Item 2: Next.js & REST/GraphQL APIs -->
+    <g transform="translate(18, 92)">
+      <rect width="334" height="42" rx="8" fill="#450a0a" stroke="#ef4444" stroke-width="0.8"/>
+      <text x="12" y="18" fill="#ffffff" font-size="12.5" font-weight="700" class="font-sans">FastAPI &amp; RESTful API Hubs</text>
+      <text x="12" y="32" fill="#fca5a5" font-size="10" class="font-mono">High-throughput Microservices &amp; WebSockets</text>
+    </g>
+
+    <!-- Item 3: Next.js 14/15 App Router -->
+    <g transform="translate(18, 142)">
+      <rect width="334" height="42" rx="8" fill="#450a0a" stroke="#ef4444" stroke-width="0.8"/>
+      <text x="12" y="18" fill="#ffffff" font-size="12.5" font-weight="700" class="font-sans">Next.js &amp; React Ecosystem</text>
+      <text x="12" y="32" fill="#fca5a5" font-size="10" class="font-mono">Server Components • SSR • Modern UI/UX</text>
+    </g>
+  </g>
+
+  <!-- Pillar 2: Cloud, K8s & Containers (Top Right) -->
+  <g transform="translate(445, 60)">
+    <rect width="370" height="210" rx="12" fill="#0d1813" stroke="#22c55e" stroke-width="1.3"/>
+    <text x="18" y="26" fill="#4ade80" font-size="13" font-weight="800" class="font-mono">☸️ CLOUD, KUBERNETES &amp; DOCKER</text>
+    
+    <!-- Item 1: Kubernetes -->
+    <g transform="translate(18, 42)">
+      <rect width="334" height="42" rx="8" fill="#052e16" stroke="#22c55e" stroke-width="0.8"/>
+      <text x="12" y="18" fill="#ffffff" font-size="12.5" font-weight="700" class="font-sans">Kubernetes (K8s) Cluster Management</text>
+      <text x="12" y="32" fill="#86efac" font-size="10" class="font-mono">Pod Scaling • Ingress Routing • Deployments</text>
+    </g>
+
+    <!-- Item 2: Docker & Jenkins -->
+    <g transform="translate(18, 92)">
+      <rect width="334" height="42" rx="8" fill="#052e16" stroke="#22c55e" stroke-width="0.8"/>
+      <text x="12" y="18" fill="#ffffff" font-size="12.5" font-weight="700" class="font-sans">Docker &amp; Automated Jenkins CI/CD</text>
+      <text x="12" y="32" fill="#86efac" font-size="10" class="font-mono">Container Builds • Automated Test Pipelines</text>
+    </g>
+
+    <!-- Item 3: Coolify & Ubuntu VPS -->
+    <g transform="translate(18, 142)">
+      <rect width="334" height="42" rx="8" fill="#052e16" stroke="#22c55e" stroke-width="0.8"/>
+      <text x="12" y="18" fill="#ffffff" font-size="12.5" font-weight="700" class="font-sans">Coolify &amp; Ubuntu VPS Cloud</text>
+      <text x="12" y="32" fill="#86efac" font-size="10" class="font-mono">Zero-Downtime Production Orchestration</text>
+    </g>
+  </g>
+
+  <!-- Pillar 3: Databases, AWS S3 & Storage (Middle Left) -->
+  <g transform="translate(35, 290)">
+    <rect width="370" height="210" rx="12" fill="#0d1813" stroke="#22c55e" stroke-width="1.3"/>
+    <text x="18" y="26" fill="#4ade80" font-size="13" font-weight="800" class="font-mono">🗄️ DATABASES, AWS S3 &amp; STORAGE</text>
+    
+    <!-- Item 1: PostgreSQL & Vector DB -->
+    <g transform="translate(18, 42)">
+      <rect width="334" height="42" rx="8" fill="#052e16" stroke="#22c55e" stroke-width="0.8"/>
+      <text x="12" y="18" fill="#ffffff" font-size="12.5" font-weight="700" class="font-sans">PostgreSQL &amp; pgvector</text>
+      <text x="12" y="32" fill="#86efac" font-size="10" class="font-mono">Relational Data • Vector Search Embeddings</text>
+    </g>
+
+    <!-- Item 2: MongoDB (NoSQL) -->
+    <g transform="translate(18, 92)">
+      <rect width="334" height="42" rx="8" fill="#052e16" stroke="#22c55e" stroke-width="0.8"/>
+      <text x="12" y="18" fill="#ffffff" font-size="12.5" font-weight="700" class="font-sans">MongoDB &amp; Document Store</text>
+      <text x="12" y="32" fill="#86efac" font-size="10" class="font-mono">Aggregation Pipelines • MERN / MEAN Ready</text>
+    </g>
+
+    <!-- Item 3: MySQL & AWS S3 -->
+    <g transform="translate(18, 142)">
+      <rect width="334" height="42" rx="8" fill="#052e16" stroke="#22c55e" stroke-width="0.8"/>
+      <text x="12" y="18" fill="#ffffff" font-size="12.5" font-weight="700" class="font-sans">MySQL &amp; AWS S3 Cloud Storage</text>
+      <text x="12" y="32" fill="#86efac" font-size="10" class="font-mono">Automated DB Schema Verification &amp; S3 Assets</text>
+    </g>
+  </g>
+
+  <!-- Pillar 4: Web Servers, Edge & Hosting (Middle Right) -->
+  <g transform="translate(445, 290)">
+    <rect width="370" height="210" rx="12" fill="#180c0e" stroke="#ef4444" stroke-width="1.3"/>
+    <text x="18" y="26" fill="#f87171" font-size="13" font-weight="800" class="font-mono">🌐 NGINX, CLOUDFLARE &amp; SERVERS</text>
+    
+    <!-- Item 1: Nginx Reverse Proxy -->
+    <g transform="translate(18, 42)">
+      <rect width="334" height="42" rx="8" fill="#450a0a" stroke="#ef4444" stroke-width="0.8"/>
+      <text x="12" y="18" fill="#ffffff" font-size="12.5" font-weight="700" class="font-sans">Nginx Reverse Proxy &amp; Load Balancer</text>
+      <text x="12" y="32" fill="#fca5a5" font-size="10" class="font-mono">SSL Termination • Proxy Pass • HTTP/2</text>
+    </g>
+
+    <!-- Item 2: Cloudflare -->
+    <g transform="translate(18, 92)">
+      <rect width="334" height="42" rx="8" fill="#450a0a" stroke="#ef4444" stroke-width="0.8"/>
+      <text x="12" y="18" fill="#ffffff" font-size="12.5" font-weight="700" class="font-sans">Cloudflare CDN, DNS &amp; WAF</text>
+      <text x="12" y="32" fill="#fca5a5" font-size="10" class="font-mono">DDoS Shield • Edge Caching • SSL/TLS</text>
+    </g>
+
+    <!-- Item 3: Local Dev Stacks -->
+    <g transform="translate(18, 142)">
+      <rect width="334" height="42" rx="8" fill="#450a0a" stroke="#ef4444" stroke-width="0.8"/>
+      <text x="12" y="18" fill="#ffffff" font-size="12.5" font-weight="700" class="font-sans">XAMPP, WAMP &amp; Linux CLI</text>
+      <text x="12" y="32" fill="#fca5a5" font-size="10" class="font-mono">Local Stacks • Bash Automation • SSH Setup</text>
+    </g>
+  </g>
+
+  <!-- Pillar 5: Fullstack Stacks - MERN, MEAN & PHP (Bottom Spanning) -->
+  <g transform="translate(35, 520)">
+    <rect width="780" height="210" rx="12" fill="#0d1813" stroke="#22c55e" stroke-width="1.3"/>
+    <text x="24" y="26" fill="#4ade80" font-size="13" font-weight="800" class="font-mono">⚡ FULLSTACK FRAMEWORKS &amp; APPLICATION STACKS</text>
+    
+    <!-- 4 Sub-cards in Row -->
+    <!-- 1. MERN -->
+    <g transform="translate(24, 45)">
+      <rect width="170" height="145" rx="8" fill="#052e16" stroke="#22c55e" stroke-width="1"/>
+      <text x="14" y="24" fill="#4ade80" font-size="13" font-weight="800" class="font-sans">MERN Stack</text>
+      <text x="14" y="44" fill="#86efac" font-size="11" class="font-sans">MongoDB, Express,</text>
+      <text x="14" y="60" fill="#86efac" font-size="11" class="font-sans">React &amp; Node.js</text>
+      <text x="14" y="90" fill="#cbd5e1" font-size="10" class="font-mono">● RESTful APIs</text>
+      <text x="14" y="106" fill="#cbd5e1" font-size="10" class="font-mono">● JWT Auth</text>
+      <text x="14" y="122" fill="#22c55e" font-size="10" font-weight="700" class="font-mono">● Production</text>
+    </g>
+
+    <!-- 2. MEAN -->
+    <g transform="translate(210, 45)">
+      <rect width="170" height="145" rx="8" fill="#180c0e" stroke="#ef4444" stroke-width="1"/>
+      <text x="14" y="24" fill="#f87171" font-size="13" font-weight="800" class="font-sans">MEAN Stack</text>
+      <text x="14" y="44" fill="#fca5a5" font-size="11" class="font-sans">MongoDB, Express,</text>
+      <text x="14" y="60" fill="#fca5a5" font-size="11" class="font-sans">Angular &amp; Node.js</text>
+      <text x="14" y="90" fill="#cbd5e1" font-size="10" class="font-mono">● Enterprise Web</text>
+      <text x="14" y="106" fill="#cbd5e1" font-size="10" class="font-mono">● TypeScript Core</text>
+      <text x="14" y="122" fill="#ef4444" font-size="10" font-weight="700" class="font-mono">● Scalable</text>
+    </g>
+
+    <!-- 3. Laravel / PHP -->
+    <g transform="translate(396, 45)">
+      <rect width="170" height="145" rx="8" fill="#180c0e" stroke="#ef4444" stroke-width="1"/>
+      <text x="14" y="24" fill="#f87171" font-size="13" font-weight="800" class="font-sans">Laravel / PHP</text>
+      <text x="14" y="44" fill="#fca5a5" font-size="11" class="font-sans">MVC Architecture,</text>
+      <text x="14" y="60" fill="#fca5a5" font-size="11" class="font-sans">Eloquent &amp; Queues</text>
+      <text x="14" y="90" fill="#cbd5e1" font-size="10" class="font-mono">● Live Validation</text>
+      <text x="14" y="106" fill="#cbd5e1" font-size="10" class="font-mono">● Redis Caching</text>
+      <text x="14" y="122" fill="#ef4444" font-size="10" font-weight="700" class="font-mono">● Enterprise</text>
+    </g>
+
+    <!-- 4. CodeIgniter & DB Schema -->
+    <g transform="translate(582, 45)">
+      <rect width="174" height="145" rx="8" fill="#052e16" stroke="#22c55e" stroke-width="1"/>
+      <text x="14" y="24" fill="#4ade80" font-size="13" font-weight="800" class="font-sans">CodeIgniter &amp; DB</text>
+      <text x="14" y="44" fill="#86efac" font-size="11" class="font-sans">Fast MVC Engine &amp;</text>
+      <text x="14" y="60" fill="#86efac" font-size="11" class="font-sans">Schema Verification</text>
+      <text x="14" y="90" fill="#cbd5e1" font-size="10" class="font-mono">● Table &amp; Type Check</text>
+      <text x="14" y="106" fill="#cbd5e1" font-size="10" class="font-mono">● Zero-Error Audits</text>
+      <text x="14" y="122" fill="#22c55e" font-size="10" font-weight="700" class="font-mono">● Verified</text>
+    </g>
+  </g>
+</svg>

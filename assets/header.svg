@@ -1,0 +1,186 @@
+<svg width="850" height="240" viewBox="0 0 850 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hBg" x1="0" y1="0" x2="850" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#060c09"/>
+      <stop offset="50%" stop-color="#0b1411"/>
+      <stop offset="100%" stop-color="#14080a"/>
+    </linearGradient>
+
+    <!-- Animated Border Gradient -->
+    <linearGradient id="hBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e">
+        <animate attributeName="stop-color" values="#22c55e;#ef4444;#10b981;#22c55e" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#10b981" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ef4444">
+        <animate attributeName="stop-color" values="#ef4444;#22c55e;#f43f5e;#ef4444" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="nameGrad" x1="0" y1="0" x2="450" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#86efac"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+
+    <linearGradient id="screenGlow" x1="0" y1="0" x2="0" y2="35" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4ade80" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    .font-mono { font-family: 'Fira Code', Consolas, monospace; }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.1); }
+    }
+    .pulse-dot { animation: pulse 2s infinite ease-in-out; transform-origin: 6px 6px; }
+
+    @keyframes orbGlow {
+      0%, 100% { opacity: 0.06; transform: translate(0, 0); }
+      50% { opacity: 0.14; transform: translate(15px, -10px); }
+    }
+    .orb-1 { animation: orbGlow 6s infinite ease-in-out; }
+    .orb-2 { animation: orbGlow 7s infinite ease-in-out reverse; }
+
+    @keyframes codeFlicker {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 1; }
+    }
+    .screen-flicker { animation: codeFlicker 1.5s infinite ease-in-out; }
+
+    @keyframes typeHands {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-2px); }
+      100% { transform: translateY(0px); }
+    }
+    .typing-hand { animation: typeHands 0.3s infinite ease-in-out; }
+
+    @keyframes steamFloat {
+      0% { opacity: 0; transform: translateY(0px) scale(0.8); }
+      50% { opacity: 0.7; }
+      100% { opacity: 0; transform: translateY(-7px) scale(1.2); }
+    }
+    .steam { animation: steamFloat 2.5s infinite linear; }
+  </style>
+
+  <!-- Outer Card Frame -->
+  <rect x="1" y="1" width="848" height="238" rx="16" fill="url(#hBg)"/>
+  <rect x="1" y="1" width="848" height="238" rx="16" stroke="url(#hBorder)" stroke-width="1.8"/>
+
+  <!-- Glowing Orbs -->
+  <circle cx="120" cy="60" r="110" fill="#22c55e" class="orb-1" filter="blur(40px)"/>
+  <circle cx="750" cy="180" r="120" fill="#ef4444" class="orb-2" filter="blur(40px)"/>
+
+  <!-- Top Status Bar -->
+  <g transform="translate(35, 28)">
+    <circle cx="6" cy="6" r="5" fill="#22c55e" class="pulse-dot"/>
+    <circle cx="6" cy="6" r="8" stroke="#22c55e" stroke-width="1" opacity="0.4"/>
+    <text x="22" y="10" fill="#4ade80" font-size="12" font-weight="600" class="font-mono" letter-spacing="1">SYSTEM ACTIVE // OPEN TO OPPORTUNITIES</text>
+  </g>
+
+  <!-- Portfolio Badge -->
+  <g transform="translate(640, 24)">
+    <rect x="0" y="0" width="175" height="26" rx="13" fill="#131e17" stroke="#22c55e" stroke-width="1" stroke-opacity="0.8"/>
+    <circle cx="15" cy="13" r="3.5" fill="#22c55e" class="pulse-dot"/>
+    <text x="30" y="17" fill="#86efac" font-size="11.5" font-weight="700" class="font-mono">🌐 developerkavi.in</text>
+  </g>
+
+  <!-- Avatar Container (Anime Boy Coding in front of Laptop) -->
+  <g transform="translate(35, 66)">
+    <rect x="0" y="0" width="92" height="92" rx="18" fill="#08100c" stroke="#22c55e" stroke-width="1.5"/>
+    <rect x="0" y="0" width="92" height="92" rx="18" stroke="#ef4444" stroke-width="1" stroke-dasharray="6 4" opacity="0.5"/>
+
+    <g transform="translate(2, 6)">
+      <!-- Ambient Screen Ray -->
+      <polygon points="18,65 70,65 62,38 26,38" fill="url(#screenGlow)" class="screen-flicker"/>
+
+      <!-- Body / Hoodie -->
+      <path d="M22 68 C22 55, 30 50, 44 50 C58 50, 66 55, 66 68 Z" fill="#1e293b"/>
+      <path d="M40 50 L44 58 L48 50" stroke="#ef4444" stroke-width="1.5" fill="none"/>
+      
+      <!-- Head / Face -->
+      <circle cx="44" cy="34" r="14" fill="#fed7aa"/>
+      
+      <!-- Cyber Neon Glasses / HUD -->
+      <rect x="35" y="31" width="8" height="5" rx="1.5" fill="#064e3b" stroke="#22c55e" stroke-width="1"/>
+      <rect x="45" y="31" width="8" height="5" rx="1.5" fill="#064e3b" stroke="#22c55e" stroke-width="1"/>
+      <line x1="43" y1="33" x2="45" y2="33" stroke="#22c55e" stroke-width="1"/>
+
+      <!-- Anime Spiky Hair -->
+      <path d="M28 32 C28 20, 36 14, 44 14 C52 14, 60 20, 60 32 C58 26, 52 22, 44 22 C36 22, 30 26, 28 32 Z" fill="#1e1b4b"/>
+      <path d="M30 26 L24 20 L33 21 Z" fill="#1e1b4b"/>
+      <path d="M36 18 L32 10 L41 15 Z" fill="#312e81"/>
+      <path d="M44 15 L46 8 L50 16 Z" fill="#1e1b4b"/>
+      <path d="M52 18 L58 11 L54 22 Z" fill="#312e81"/>
+      <path d="M58 25 L64 22 L58 30 Z" fill="#1e1b4b"/>
+      <path d="M32 10 L41 15 L46 8 L50 16 L58 11" stroke="#ef4444" stroke-width="0.8" fill="none" opacity="0.8"/>
+
+      <!-- Cyber Neon Headphones -->
+      <path d="M27 34 C27 23, 61 23, 61 34" stroke="#ef4444" stroke-width="2.5" fill="none"/>
+      <rect x="25" y="30" width="4" height="10" rx="2" fill="#0f172a" stroke="#22c55e" stroke-width="1.2"/>
+      <rect x="59" y="30" width="4" height="10" rx="2" fill="#0f172a" stroke="#22c55e" stroke-width="1.2"/>
+
+      <!-- Typing Arms -->
+      <g class="typing-hand">
+        <path d="M25 62 Q 33 60, 37 63" stroke="#fed7aa" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M63 62 Q 55 60, 51 63" stroke="#fed7aa" stroke-width="3.5" stroke-linecap="round"/>
+      </g>
+
+      <!-- Laptop Base -->
+      <path d="M22 66 L66 66 L62 70 L26 70 Z" fill="#334155" stroke="#475569" stroke-width="0.8"/>
+      <line x1="28" y1="67" x2="60" y2="67" stroke="#22c55e" stroke-width="1" opacity="0.8"/>
+
+      <!-- Laptop Screen -->
+      <rect x="29" y="44" width="30" height="20" rx="2" fill="#031f13" stroke="#22c55e" stroke-width="1.2" class="screen-flicker"/>
+      <line x1="32" y1="48" x2="48" y2="48" stroke="#4ade80" stroke-width="1"/>
+      <line x1="32" y1="52" x2="55" y2="52" stroke="#22c55e" stroke-width="1"/>
+      <line x1="32" y1="56" x2="44" y2="56" stroke="#ef4444" stroke-width="1"/>
+      <line x1="32" y1="60" x2="52" y2="60" stroke="#86efac" stroke-width="1"/>
+
+      <!-- Steaming Mug -->
+      <rect x="69" y="63" width="7" height="7" rx="1.5" fill="#ef4444"/>
+      <path d="M76 65 Q 78 66.5, 76 68" stroke="#ef4444" stroke-width="0.8" fill="none"/>
+      <path d="M72 61 Q 70 59, 72 57" stroke="#ffffff" stroke-width="0.7" fill="none" class="steam"/>
+    </g>
+  </g>
+
+  <!-- Name & Professional Title -->
+  <g transform="translate(148, 75)">
+    <text x="0" y="16" fill="#f87171" font-size="13" font-weight="700" letter-spacing="2" class="font-mono">HELLO WORLD, I AM</text>
+    <text x="0" y="52" fill="url(#nameGrad)" font-size="36" font-weight="900" class="font-sans" letter-spacing="-0.5">KAVIYARASAN M</text>
+    <text x="0" y="76" fill="#94a3b8" font-size="14" font-weight="500" class="font-sans">
+      Full Stack Software Engineer &amp; Web Architect
+    </text>
+  </g>
+
+  <!-- Bottom Badges -->
+  <g transform="translate(35, 178)">
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="180" height="36" rx="8" fill="#0c1611" stroke="#1b3826" stroke-width="1"/>
+      <text x="14" y="22" fill="#86efac" font-size="11" font-weight="600" class="font-mono">EXP:</text>
+      <text x="45" y="22" fill="#f8fafc" font-size="11" font-weight="700" class="font-mono">FULL STACK DEV</text>
+    </g>
+
+    <g transform="translate(195, 0)">
+      <rect x="0" y="0" width="220" height="36" rx="8" fill="#180c0e" stroke="#3d1519" stroke-width="1"/>
+      <text x="14" y="22" fill="#f87171" font-size="11" font-weight="600" class="font-mono">CORE:</text>
+      <text x="56" y="22" fill="#fca5a5" font-size="11" font-weight="700" class="font-mono">PHP • REACT • LARAVEL</text>
+    </g>
+
+    <g transform="translate(430, 0)">
+      <rect x="0" y="0" width="190" height="36" rx="8" fill="#0c1611" stroke="#1b3826" stroke-width="1"/>
+      <text x="14" y="22" fill="#86efac" font-size="11" font-weight="600" class="font-mono">FOCUS:</text>
+      <text x="65" y="22" fill="#4ade80" font-size="11" font-weight="700" class="font-mono">CLEAN &amp; SCALE</text>
+    </g>
+
+    <g transform="translate(635, 0)">
+      <rect x="0" y="0" width="145" height="36" rx="8" fill="#064e3b" stroke="#059669" stroke-width="1"/>
+      <circle cx="16" cy="18" r="4" fill="#34d399" class="pulse-dot"/>
+      <text x="28" y="22" fill="#a7f3d0" font-size="11" font-weight="700" class="font-mono">READY TO BUILD</text>
+    </g>
+  </g>
+</svg>
