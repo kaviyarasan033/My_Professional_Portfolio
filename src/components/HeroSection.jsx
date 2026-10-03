@@ -13,7 +13,7 @@ export default function HeroSection() {
                                                 data-background="/images/hero-bg.jpg"
                                                 style={{"backgroundImage": "url('/images/hero-bg.jpg')"}}>
                                                 <div className="container">
-                                                    <div className="row g-4 align-items-end">
+                                                    <div className="row g-4 align-items-center">
                                                         <div className="col-xl-8">
                                                             <div className="hero-content">
                                                                 <div className="hero-list wow fadeInUp"

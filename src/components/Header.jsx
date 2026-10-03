@@ -68,8 +68,10 @@ export default function Header() {
 
                         .elementor-304 .elementor-element.elementor-element-beff9d3 .navbar-brand img,
                         .elementor-304 .elementor-element.elementor-element-beff9d3 .logo img {
-                            width: 150px !important;
-                            max-width: 150px !important;
+                            width: auto !important;
+                            max-width: 240px !important;
+                            height: 52px !important;
+                            max-height: 54px !important;
                         }
 
                         .elementor-304 .elementor-element.elementor-element-beff9d3 .sidebar__toggle span,
@@ -291,9 +293,9 @@ export default function Header() {
 
                                             {/* ===================== DESKTOP NAVBAR ===================== */}
                                             <nav className="navbar p-0 navbar-expand-xl d-none d-xl-flex">
-                                                <a className="navbar-brand" href="#home">
-                                                    <img src="/images/logokavi.png" alt="KaviScript" className="main-logo" style={{ "maxHeight": "42px", "height": "42px", "width": "auto", "maxWidth": "180px", "objectFit": "contain" }} />
-                                                    <img src="/images/logokavi.png" alt="KaviScript" className="sticky-logo" style={{ "maxHeight": "42px", "height": "42px", "width": "auto", "maxWidth": "180px", "objectFit": "contain" }} />
+                                                <a className="navbar-brand d-flex align-items-center" href="#home">
+                                                    <img src="/images/logokavi.png" alt="KaviScript" className="main-logo" style={{ "maxHeight": "54px", "height": "52px", "width": "auto", "maxWidth": "240px", "objectFit": "contain" }} />
+                                                    <img src="/images/logokavi.png" alt="KaviScript" className="sticky-logo" style={{ "maxHeight": "54px", "height": "52px", "width": "auto", "maxWidth": "240px", "objectFit": "contain" }} />
                                                 </a>
 
                                                 <button className="navbar-toggler" type="button"
@@ -350,7 +352,7 @@ export default function Header() {
                                     <div className="offcanvas-menu position-fixed">
                                         <div
                                             className="header-top d-flex align-items-center justify-content-between gap-4">
-                                            <div className="logo offcanvas_menu_logo"><a href="#home"><img src="/images/logokavi.png" alt="KaviScript" style={{ "maxHeight": "38px", "height": "38px", "width": "auto", "maxWidth": "160px", "objectFit": "contain" }} />
+                                            <div className="logo offcanvas_menu_logo"><a href="#home"><img src="/images/logokavi.png" alt="KaviScript" style={{ "maxHeight": "48px", "height": "46px", "width": "auto", "maxWidth": "200px", "objectFit": "contain" }} />
                                             </a>
                                             </div>
                                             <button
@@ -449,7 +451,7 @@ export default function Header() {
 
                                                     <div className="logo">
                                                         <a href="#home">
-                                                            <img src="/images/logokavi.png" alt="KaviScript" style={{ "maxHeight": "36px", "height": "36px", "width": "auto", "maxWidth": "150px", "objectFit": "contain" }} />
+                                                            <img src="/images/logokavi.png" alt="KaviScript" style={{ "maxHeight": "48px", "height": "46px", "width": "auto", "maxWidth": "200px", "objectFit": "contain" }} />
                                                         </a>
                                                     </div>
 
@@ -473,7 +475,7 @@ export default function Header() {
 
                                             <div className="logo">
                                                 <a href="#home">
-                                                    <img src="/images/logokavi.png" alt="KaviScript" style={{ "maxHeight": "36px", "height": "36px", "width": "auto", "maxWidth": "150px", "objectFit": "contain" }} />
+                                                    <img src="/images/logokavi.png" alt="KaviScript" style={{ "maxHeight": "48px", "height": "46px", "width": "auto", "maxWidth": "200px", "objectFit": "contain" }} />
                                                 </a>
                                             </div>
 

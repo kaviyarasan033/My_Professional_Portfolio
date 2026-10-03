@@ -80,38 +80,9 @@ export default function AboutSection() {
                                                                         </div>
                                                                     </div>
 
-                                                                    <div className="about-counter-items wow fadeInUp"
-                                                                        data-wow-delay=".9s">
-                                                                        <div className="counter-items wow fadeInUp"
-                                                                            data-wow-delay="0.9s">
-                                                                            <h2>
-                                                                                <span className="count">2</span>
-                                                                                <sub>+</sub>
-                                                                            </h2>
-                                                                            <p>Years Experience</p>
-                                                                        </div>
-                                                                        <div className="line-1"></div>
-                                                                        <div className="counter-items wow fadeInUp"
-                                                                            data-wow-delay="1.0s">
-                                                                            <h2>
-                                                                                <span className="count">10</span>
-                                                                                <sub>+</sub>
-                                                                            </h2>
-                                                                            <p>Production Apps</p>
-                                                                        </div>
-                                                                        <div className="line-1"></div>
-                                                                        <div className="counter-items wow fadeInUp"
-                                                                            data-wow-delay="1.1s">
-                                                                            <h2>
-                                                                                <span className="count">15</span>
-                                                                                <sub>+</sub>
-                                                                            </h2>
-                                                                            <p>Tech Frameworks</p>
-                                                                        </div>
-                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                            <div className="col-xl-6 col-lg-6">
+                                                            <div className="col-xl-6 col-lg-6 d-flex flex-column justify-content-center">
                                                                 <div className="about-right-items">
                                                                     <h2 className="text_invert-2">
                                                                         Architecting resilient backends, cross-platform
@@ -136,38 +107,33 @@ export default function AboutSection() {
                                                                                 className="fa-solid fa-file-arrow-down"></i>
                                                                         </span>
                                                                     </a>
-
-                                                                    <div className="about-team-items wow fadeInUp"
-                                                                        data-wow-delay=".5s">
-                                                                        <div className="content">
-                                                                            <h2>Education Background</h2>
-                                                                            <h5
-                                                                                style={{"color": "#ffffff", "marginTop": "10px", "fontWeight": "700"}}>
-                                                                                Master of Computer Applications (MCA)
-                                                                            </h5>
-                                                                            <p
-                                                                                style={{"color": "rgba(255,255,255,0.7)", "marginBottom": "5px"}}>
-                                                                                Mohammed Sathak Engineering College,
-                                                                                Chennai &bull; 2022 – 2024
-                                                                            </p>
-                                                                            <p
-                                                                                style={{"fontSize": "14px", "color": "#ff6b6b", "fontWeight": "600"}}>
-                                                                                Specialization in Software Architecture
-                                                                                &amp; Database Engineering
-                                                                            </p>
-                                                                            <div
-                                                                                className="social-icon d-flex align-items-center mt-3">
-                                                                                <a href="https://linkedin.com"
-                                                                                    target="_blank"><i
-                                                                                        className="fab fa-linkedin-in text-white"></i></a>
-                                                                                <a href="https://github.com"
-                                                                                    target="_blank"><i
-                                                                                        className="fab fa-github text-white"></i></a>
-                                                                                <a
-                                                                                    href="mailto:mkaviyarasan003@gmail.com"><i
-                                                                                        className="fas fa-envelope text-white"></i></a>
-                                                                            </div>
-                                                                        </div>
+                                                                </div>
+                                                            </div>
+                                                            <div className="col-12">
+                                                                <div className="about-counter-items-full wow fadeInUp"
+                                                                    data-wow-delay=".5s">
+                                                                    <div className="counter-items">
+                                                                        <h2>
+                                                                            <span className="count">2</span>
+                                                                            <sub>+</sub>
+                                                                        </h2>
+                                                                        <p>Years Experience</p>
+                                                                    </div>
+                                                                    <div className="line-1"></div>
+                                                                    <div className="counter-items">
+                                                                        <h2>
+                                                                            <span className="count">10</span>
+                                                                            <sub>+</sub>
+                                                                        </h2>
+                                                                        <p>Production Apps</p>
+                                                                    </div>
+                                                                    <div className="line-1"></div>
+                                                                    <div className="counter-items">
+                                                                        <h2>
+                                                                            <span className="count">15</span>
+                                                                            <sub>+</sub>
+                                                                        </h2>
+                                                                        <p>Tech Frameworks</p>
                                                                     </div>
                                                                 </div>
                                                             </div>

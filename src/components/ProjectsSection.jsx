@@ -136,43 +136,7 @@ export default function ProjectsSection() {
                   </div>
                 </div>
 
-                {/* Section Bottom Content & CTA */}
-                <div className="col-12 mt-5 text-center">
-                  <div className="project-content-box">
-                    <p
-                      className="wow fadeInUp"
-                      data-wow-delay=".3s"
-                      style={{
-                        maxWidth: 640,
-                        margin: "0 auto 24px",
-                        color: "rgba(17, 17, 17, 0.75)",
-                        fontSize: "16px",
-                        lineHeight: "1.7",
-                      }}
-                    >
-                      Engineering scalable web &amp; mobile solutions tailored for high load, clean code architecture, and automated CI/CD deployments.
-                    </p>
-
-                    <a
-                      className="theme-btn-main style-2 wow fadeInUp"
-                      data-wow-delay=".5s"
-                      href="https://github.com"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <span className="theme-btn-arrow-left">
-                        <i className="fa-brands fa-github"></i>
-                      </span>
-                      <span className="theme-btn">
-                        <span className="btn-text1">Explore</span>
-                        <span className="btn-text2">All Work On GitHub</span>
-                      </span>
-                      <span className="theme-btn-arrow-right">
-                        <i className="fa-brands fa-github"></i>
-                      </span>
-                    </a>
-                  </div>
-                </div>
+           
               </div>
             </div>
           </section>
