@@ -73,15 +73,7 @@ export default function AchievementsSection() {
                                                                             2025/2026</span>
                                                                     </div>
                                                                 </div>
-                                                                <div className="award-items mb-0">
-                                                                    <div className="icon"
-                                                                        style={{"width": "50px", "height": "50px", "display": "flex", "alignItems": "center", "justifyContent": "center", "flexShrink": "0"}}>
-                                                                        <img decoding="async" src="/images/award-4.png"
-                                                                            alt="NPM Published CLI"
-                                                                            style={{"width": "50px", "height": "50px", "objectFit": "contain"}} />
-                                                                    </div>
-                                                          
-                                                                </div>
+                                                         
                                                             </li>
                                                         </ul>
                                                     </div>
