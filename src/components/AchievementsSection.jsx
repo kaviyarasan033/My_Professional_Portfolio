@@ -80,11 +80,7 @@ export default function AchievementsSection() {
                                                                             alt="NPM Published CLI"
                                                                             style={{"width": "50px", "height": "50px", "objectFit": "contain"}} />
                                                                     </div>
-                                                                    <div className="content">
-                                                                        <h3>npx create-mern-pro (Published CLI)</h3>
-                                                                        <span>NPM Published Developer Tool —
-                                                                            Ongoing</span>
-                                                                    </div>
+                                                          
                                                                 </div>
                                                             </li>
                                                         </ul>

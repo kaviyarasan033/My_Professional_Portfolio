@@ -15,7 +15,6 @@ export default function Header() {
             document.querySelector(".mobile-menu-main")?.classList.remove("active");
             document.body.classList.remove("no-scroll");
         };
-        
 
         const openOffcanvas = () => {
             document.querySelector(".offcanvas-overlay")?.classList.add("active");
